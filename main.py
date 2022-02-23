@@ -11,6 +11,7 @@ def unzip_model(zip_model_path):
     # root = str(p.parents[0])
     print(f'start unzip: {root_folder}')
     model_path = os.path.join(root_folder, os.path.splitext(os.path.basename(zip_model_path))[0] + '/')
+    print(os.listdir("/tmp"))
     if not os.path.isdir(model_path):
         print("no directory")
         print(f'create: {model_path}')
