@@ -13,7 +13,9 @@ def unzip_model(zip_model_path):
     model_path = os.path.join(root_folder, os.path.splitext(os.path.basename(zip_model_path))[0] + '/')
     if not os.path.isdir(model_path):
         print("no directory")
+        print(f'create: {model_path}')
         os.mkdir(model_path)
+        print(f"unzip from {zip_model_path} to {model_path}")
         with zipfile.ZipFile(zip_model_path, "r") as zip_ref:
             zip_ref.extractall(model_path)
     else:
