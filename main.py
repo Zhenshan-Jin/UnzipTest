@@ -22,7 +22,7 @@ zip_file_path = "/pebble_tmp/tmp/test.zip"
 model_path = unzip_model(zip_file_path)
 
 def compute(i):
-    return 1
+    return model_path
 
 
     
