@@ -30,7 +30,7 @@ zip_file_path = "/pebble_tmp/tmp/test.zip"
 
 def compute(i):
     model_path = unzip_model(zip_file_path)
-    print(root_folder)
+
     return model_path
 
 
