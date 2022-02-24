@@ -4,8 +4,7 @@ import pathlib
 import zipfile
 import os
 
-# root_folder = tempfile.gettempdir()
-root_folder = "/tmp"
+root_folder = tempfile.gettempdir()
 
 def unzip_model(zip_model_path):
     p = pathlib.Path(zip_model_path)
