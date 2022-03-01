@@ -1,35 +1,13 @@
-
+import nltk
+from nltk.corpus import wordnet as wn
 import tempfile
-import pathlib
-import zipfile
-import os
 
 root_folder = tempfile.gettempdir()
+nltk.download('wordnet', download_dir=root_folder) # download the package to specific directory
+nltk.data.path.append(root_folder) # add the directory to the nltk data loading path
+nltk.download('omw-1.4', download_dir=root_folder) # download the package to specific directory
 
-def unzip_model(zip_model_path):
-    p = pathlib.Path(zip_model_path)
-    # root = str(p.parents[0])
-    print(f'start unzip: {root_folder}')
-    model_path = os.path.join(root_folder, os.path.splitext(os.path.basename(zip_model_path))[0] + '/')
-    print(os.listdir(root_folder))
-    if not os.path.isdir(model_path):
-        print("no directory")
-        print(f'create: {model_path}')
-        os.mkdir(model_path)
-        print(f"unzip from {zip_model_path} to {model_path}")
-        with zipfile.ZipFile(zip_model_path, "r") as zip_ref:
-            zip_ref.extractall(model_path)
-    else:
-        print("has directory")
-        print(f"files: {os.listdir(model_path)}")
-    print(f"finish zipping model to {model_path}")
-    return model_path
-
-zip_file_path = "/pebble_tmp/tmp/test.zip"
-model_path = unzip_model(zip_file_path)
-
-def compute(i):
-    return model_path
-
+def compute(test):
+    return {"result": [i.name() for i in wn.synsets("same")]}
 
     
