@@ -1,7 +1,6 @@
-import nltk
+# import nltk
 # from nltk.corpus import wordnet as wn
 # import tempfile
-import qrcode
 
 # root_folder = tempfile.gettempdir()
 # nltk.download('wordnet', download_dir=root_folder) # download the package to specific directory
@@ -9,6 +8,7 @@ import qrcode
 # nltk.download('omw-1.4', download_dir=root_folder) # download the package to specific directory
 
 def compute(test):
+    import qrcode
     qr = qrcode.QRCode(version=1, box_size=10, border=5)
     qr.add_data(test)
     qr.make(fit=True)
