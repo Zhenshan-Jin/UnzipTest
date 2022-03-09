@@ -1,6 +1,7 @@
 import nltk
-from nltk.corpus import wordnet as wn
+# from nltk.corpus import wordnet as wn
 # import tempfile
+import geopandas
 
 # root_folder = tempfile.gettempdir()
 # nltk.download('wordnet', download_dir=root_folder) # download the package to specific directory
