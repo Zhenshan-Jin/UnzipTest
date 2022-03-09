@@ -8,10 +8,8 @@
 # nltk.download('omw-1.4', download_dir=root_folder) # download the package to specific directory
 
 def compute(test):
-    import qrcode
-    qr = qrcode.QRCode(version=1, box_size=10, border=5)
-    qr.add_data(test)
-    qr.make(fit=True)
+    import keras
+    
     return "test"
 
     
