@@ -1,7 +1,7 @@
 import nltk
 # from nltk.corpus import wordnet as wn
 # import tempfile
-import geopandas
+import qrcode
 
 # root_folder = tempfile.gettempdir()
 # nltk.download('wordnet', download_dir=root_folder) # download the package to specific directory
@@ -9,6 +9,9 @@ import geopandas
 # nltk.download('omw-1.4', download_dir=root_folder) # download the package to specific directory
 
 def compute(test):
-    return {"result": [i.name() for i in wn.synsets("same")]}
+    qr = qrcode.QRCode(version=1, box_size=10, border=5)
+    qr.add_data(test)
+    qr.make(fit=True)
+    return "test"
 
     
