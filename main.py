@@ -8,7 +8,7 @@
 # nltk.download('omw-1.4', download_dir=root_folder) # download the package to specific directory
 
 def compute(test):
-    import keras
+    import sklearn
     
     return "test"
 
