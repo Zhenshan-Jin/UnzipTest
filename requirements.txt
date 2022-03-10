@@ -1,2 +1,1 @@
-qrcode
 GoogleNews==1.6.0
